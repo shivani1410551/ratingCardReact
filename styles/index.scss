@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+$Orange: hsl(25, 97%, 53%);
+$White: hsl(0, 0%, 100%);
+$LightGrey: hsl(217, 12%, 63%);
+$MediumGrey: hsl(216, 12%, 54%);
+$DarkBlue: hsl(213, 19%, 18%);
+$VeryDarkBlue: hsl(216, 12%, 8%);
+$font-family: "Overpass", sans-serif;
+$font-weight: (
+  "regular": 400,
+  "bold": 700,
+);
+$transition: 100ms ease;
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+$radius-outer: 100px;
+$radius-circle: 50%;
+$fontSize-title: 2.4rem;
+$fontSize-body: 1.4rem;
+
+.hidden {
+  display: none;
+}
+a,
+span,
+img,
+button {
+  display: block;
+}
+img {
+  height: auto;
+  width: 100%;
+}
+.item-center {
+  display: grid;
+  place-items: center;
+}
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+button {
+  outline: none;
+  border: none;
+}
+@mixin flexbox($jc) {
+  display: flex;
+  align-items: center;
+  justify-content: $jc;
+}
+.submitBtn {
+  border-radius: $radius-outer;
+  transition: all $transition;
+  background-color: $Orange;
+  color: $White;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  width: 100%;
+  margin-block: 40px 10px;
+  padding-block: 12px;
+  line-height: 1;
+  &:hover {
+    background-color: $White;
+    color: $Orange;
+  }
+  &:focus {
+    background-color: $Orange;
+    transition: all $transition;
+  }
+}
+body {
+  @include flexbox(center);
+  font-family: $font-family;
+  background-color: $VeryDarkBlue;
+  min-height: 100vh;
+  line-height: 1.6;
+  max-width: 100%;
+  .card {
+    max-width: 410px;
+    background-color: $DarkBlue;
+    border-radius: 16px;
+    margin-inline: 1rem;
+    padding: 30px 20px;
+    .rating-state {
+      .card-icon {
+        @extend .circle;
+        @extend .item-center;
+        background-color: hsla(214, 12%, 54%, 0.161);
+        margin-block: 10px;
+        img {
+          height: auto;
+          width: 20px;
+        }
+      }
+      .card-title {
+        h1 {
+          color: $White;
+          margin-block: 10px;
+        }
+      }
+      .card-text {
+        color: $LightGrey;
+      }
+      .stars-wrapper {
+        @include flexbox(space-between);
+        margin-block: 30px 10px;
+        .iconBtn {
+          color: $MediumGrey;
+          height: 40px;
+          width: 40px;
+          border-radius: $radius-circle;
+          @extend .item-center;
+          transition: $transition;
+          background-color: #7c889829;
+          &:hover {
+            color: $White;
+            background-color: $MediumGrey;
+          }
+          &:focus {
+            background-color: $Orange;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .thankuState {
+    text-align: center;
+    img {
+      width: 160px;
+      height: auto;
+      margin: 20px auto;
+    }
+    .card-subtitle {
+      color: $Orange;
+      background-color: #7c889829;
+      border-radius: $radius-outer;
+      max-width: max-content;
+      line-height: 1;
+      margin: 10px auto;
+      padding: 10px 16px;
+      span {
+        display: inline;
+      }
+    }
+    .card-title {
+      color: $White;
+      padding-block: 15px 10px;
+    }
+    .card-text {
+      color: $MediumGrey;
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .card {
+    width: 375px;
+  }
+}

@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.selected {
+  background-color: hsl(25deg, 97%, 53%);
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+a,
+span,
+img,
+button {
+  display: block;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+.item-center, body .card .rating-state .stars-wrapper .iconBtn, body .card .rating-state .card-icon {
+  display: grid;
+  place-items: center;
+}
+
+.circle, body .card .rating-state .card-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.submitBtn {
+  border-radius: 100px;
+  transition: all 100ms ease;
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  width: 100%;
+  margin-block: 40px 10px;
+  padding-block: 12px;
+  line-height: 1;
+}
+.submitBtn:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+}
+.submitBtn:focus {
+  background-color: hsl(25deg, 97%, 53%);
+  transition: all 100ms ease;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(216deg, 12%, 8%);
+  min-height: 100vh;
+  line-height: 1.6;
+  max-width: 100%;
+}
+body .card {
+  max-width: 410px;
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 16px;
+  margin-inline: 1rem;
+  padding: 30px 20px;
+}
+body .card .rating-state .card-icon {
+  background-color: hsla(214deg, 12%, 54%, 0.161);
+  margin-block: 10px;
+}
+body .card .rating-state .card-icon img {
+  height: auto;
+  width: 20px;
+}
+body .card .rating-state .card-title h1 {
+  color: hsl(0deg, 0%, 100%);
+  margin-block: 10px;
+}
+body .card .rating-state .card-text {
+  color: hsl(217deg, 12%, 63%);
+}
+body .card .rating-state .stars-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block: 30px 10px;
+}
+body .card .rating-state .stars-wrapper .iconBtn {
+  color: hsl(216deg, 12%, 54%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition: 100ms ease;
+  background-color: rgba(124, 136, 152, 0.1607843137);
+}
+body .card .rating-state .stars-wrapper .iconBtn:hover {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(216deg, 12%, 54%);
+}
+body .thankuState {
+  text-align: center;
+}
+body .thankuState img {
+  width: 160px;
+  height: auto;
+  margin: 20px auto;
+}
+body .thankuState .card-subtitle {
+  color: hsl(25deg, 97%, 53%);
+  background-color: rgba(124, 136, 152, 0.1607843137);
+  border-radius: 100px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  line-height: 1;
+  margin: 10px auto;
+  padding: 10px 16px;
+}
+body .thankuState .card-subtitle span {
+  display: inline;
+}
+body .thankuState .card-title {
+  color: hsl(0deg, 0%, 100%);
+  padding-block: 15px 10px;
+}
+body .thankuState .card-text {
+  color: hsl(216deg, 12%, 54%);
+  font-size: 16px;
+}
+
+@media screen and (max-width: 410px) {
+  .card {
+    width: 375px;
+  }
+}/*# sourceMappingURL=index.css.map */
