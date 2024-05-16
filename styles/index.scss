@@ -82,7 +82,7 @@ body {
   @include flexbox(center);
   font-family: $font-family;
   background-color: $VeryDarkBlue;
-  min-height: 100vh;
+  height: 100vh;
   line-height: 1.6;
   max-width: 100%;
   .card {
